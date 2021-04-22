@@ -10,14 +10,10 @@ public class TestApp {
         int[] Identity = {1,0,0 ,0,1,0 ,0,0,1};
 
         // A
-        A.setNumbers( arr );
-        A.Print();
-        System.out.println();
-
-        // Transpose A
-        A.Transpose();
-        A.Print();
-        System.out.println();
+        if ( A.setNumbers( arr ) ) {
+            A.Print();
+            System.out.println();
+        }
 
         // B Identity Check
         if( B.setNumbers( Identity ) ) {
@@ -29,8 +25,16 @@ public class TestApp {
         }
 
         Matrix D = new Matrix( 2 , 3 );
-        int[] arr2 = {0,0,0,0,0,0};
+        int[] arr2 = {0,1,0,6,0,0};
         D.setNumbers( arr2 );
+        D.Print();
+        System.out.println();
+
+        // Transpose D
+        D.Transpose();
+        D.Print();
+        System.out.println();
+
         try {
             D.add(A);
         } catch(Exception e) {

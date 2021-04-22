@@ -24,12 +24,12 @@ public class Matrix implements Addable {
         int n = M , m = N;
         int[][] transpose = new int[m][n];
 
-        for( int i=0 ; i<M ; i++) 
-            for( int j=0 ; j<N ; j++) transpose[i][j] = Numbers[j][i];
+        for( int i=0 ; i<m ; i++) 
+            for( int j=0 ; j<n ; j++) transpose[i][j] = Numbers[j][i];
 
         Numbers = transpose;
-        N = m ;
-        M = n;
+        M = m;
+        N = n;
     }
 
     public void Print() {
